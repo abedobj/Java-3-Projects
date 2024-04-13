@@ -1,0 +1,21 @@
+main{
+    text-align: center;
+    margin-top: 130px;
+   }
+   .button-container{
+       margin-top: 30px;
+   }
+   .reset{
+       margin-left: 10px;
+       margin-right: 10px;
+   
+   }
+   #value{
+       font-size:50px;
+   }
+   .btn{
+       padding: 8px 20px;
+       font-weight: bolder;
+       border: solid 2px black;
+       border-radius: 10px;
+   }
