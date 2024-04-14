@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Menu</title>
+<script src="https://kit.fontawesome.com/eeb623132b.js" crossorigin="anonymous"></script>
+<style>
+    body {
+        /* background-image: url(./images/grey.jpg);
+        background-position: inherit;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        background-color: black;
+        font-family: Arial, sans-serif;
+        /* background-color: #f4f4f4; */
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-image: url(./images/foodie.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgb(4, 250, 209);
+        text-align: center;
+    }
+    h1 {
+        color: rgba(245, 245, 245, 0.603);
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+    h1:after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 3px;
+        background-color: #eb1717;
+        position: absolute;
+        bottom: -8px;
+        left: 25%;
+    }
+    .menu-btn {
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: gray;
+        color: #fff;
+        margin: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .menu-btn:hover {
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: rgb(57, 90, 78);
+        color: white;
+        margin: 10px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 10px rgb(4, 250, 209);
+    }
+    .menu-btn.active {
+        background-color: #45a049;
+    }
+    .menu-content {
+        
+        display: none;
+        margin-top: 20px;
+    }
+    .menu-content.active {
+        display: block;
+    }
+    .food-item {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .food-item img {
+        width: 180px;
+        height: 140px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    h3, p{
+        color: rgba(245, 245, 245, 0.603);
+    }
+    span{flex: end;
+    }
+    .icon{
+        color: #ffffff;
+        font-size: 25px;
+        gap: 1rem;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="home-icon">
+    <a href="./landing.html"><span class="icon"><i class="fa-solid fa-house-circle-exclamation"></i></span></a>
+    <h1>Our Menu</h1>
+    
+    </div>
+    
+   
+    
+    <br><br>
+    <button class="menu-btn" onclick="toggleMenu('breakfast')">Breakfast</button>
+    <button class="menu-btn" onclick="toggleMenu('lunch')">Lunch</button>
+    <button class="menu-btn" onclick="toggleMenu('brunch')">Brunch</button>
+    <button class="menu-btn" onclick="toggleMenu('dinner')">Dinner</button>
+    <button class="menu-btn" onclick="toggleMenu('dessert')">Dessert</button>
+    
+    
+    <div id="breakfast-menu" class="menu-content">
+        <!-- Breakfast Menu Items -->
+        <div class="food-item">
+            <img src="./images/images (1).jpg" alt="Breakfast Item 1">
+            <div>
+                <h3>Breakfast Item 1</h3>
+                <p>Description of Breakfast Item 1</p>
+                <p>$10.00</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/images (2).jpg" alt="Breakfast Item 2">
+            <div>
+                <h3>Breakfast Item 2</h3>
+                <p>Description of Breakfast Item 2 <span>$12.00</span></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="lunch-menu" class="menu-content">
+        <!-- Lunch Menu Items -->
+        <div class="food-item">
+            <img src="./images/images (3).jpg" alt="Lunch Item 1">
+            <div>
+                <h3>Lunch Item 1</h3>
+                <p>Description of Lunch Item 1</p>
+                <p>$15.00</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/images (4).jpg" alt="Lunch Item 2">
+            <div>
+                <h3>Lunch Item 2</h3>
+                <p>Description of Lunch Item 2</p>
+                <p>$18.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="brunch-menu" class="menu-content">
+        <!-- brunch Menu Items -->
+        <div class="food-item">
+            <img src="./images/images (5).jpg" alt="Brunch Item 1">
+            <div>
+                <h3>Brunch Item 1</h3>
+                <p>Description of Brunch Item 1</p>
+                <p>$17.00</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/images (6).jpg" alt="Brunch Item 2">
+            <div>
+                <h3>Brunch Item 2</h3>
+                <p>Description of Brunch Item 2</p>
+                <p>$15.50</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/images (9).jpg" alt="Brunch Item 2">
+            <div>
+                <h3>Brunch Item 2</h3>
+                <p>Description of Brunch Item 2</p>
+                <p>$19.50</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="dinner-menu" class="menu-content">
+        <!-- Dinner Menu Items -->
+        <div class="food-item">
+            <img src="./images/images (7).jpg" alt="Dinner Item 1">
+            <div>
+                <h3>Dinner Item 1</h3>
+                <p>Description of Dinner Item 1</p>
+                <p>$16.00</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/images (8).jpg" alt="Dinner Item 2">
+            <div>
+                <h3>Dinner Item 2</h3>
+                <p>Description of Dinner Item 2</p>
+                <p>$19.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="dessert-menu" class="menu-content">
+        <!-- Dessert Menu Items -->
+        <div class="food-item">
+            <img src="./images/dessert.jpg" alt="Dessert Item 1">
+            <div>
+                <h3>Dessert Item 1</h3>
+                <p>Description of Dessert Item 1</p>
+                <p>$10.00</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/download.jpg" alt="Dessert Item 2">
+            <div>
+                <h3>Dessert Item 2</h3>
+                <p>Description of Dessert Item 2</p>
+                <p>$8.00</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/dessert.jpg" alt="Dessert Item 1">
+            <div>
+                <h3>Dessert Item 1</h3>
+                <p>Description of Dessert Item 1</p>
+                <p>$10.00</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./images/download.jpg" alt="Dessert Item 2">
+            <div>
+                <h3>Dessert Item 2</h3>
+                <p>Description of Dessert Item 2</p>
+                <p>$8.00</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add other menu sections similarly -->
+</div>
+<script>
+    function toggleMenu(menu) {
+        // Hide all menu contents
+        var menus = document.getElementsByClassName('menu-content');
+        for (var i = 0; i < menus.length; i++) {
+            menus[i].classList.remove('active');
+        }
+        // Show selected menu content
+        document.getElementById(menu + '-menu').classList.add('active');
+        // Update button styles
+        var buttons = document.getElementsByClassName('menu-btn');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove('active');
+            if (buttons[i].innerText.toUpperCase() === menu) {
+                buttons[i].classList.add('active');
+            }
+        }
+    }
+</script>
+</body>
+</html>
